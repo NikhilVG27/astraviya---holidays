@@ -1,0 +1,78 @@
+.collections {
+  padding: 30px;
+  background: #a3a5ac;
+  color: white;
+}
+
+.collections h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+/* Scroll container */
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px; /* reduced gap */
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+/* Hide scrollbar */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards in a row */
+  gap: 30px;
+}
+/* Card */
+.card {
+  min-width: 250px; /* 4 cards visible */
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Image */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* IMPORTANT: makes all images uniform */
+  border-radius: 12px;
+  object-position: center;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.overlay h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+  font-weight: bold;
+}

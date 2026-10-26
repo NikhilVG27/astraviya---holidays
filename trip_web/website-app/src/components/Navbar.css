@@ -1,0 +1,173 @@
+/* ===== RESET (VERY IMPORTANT) ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  padding: 10px 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ===== Container ===== */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ===== Logo ===== */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ===== Center Nav Links ===== */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Links */
+.nav-links span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;   /* prevents breaking */
+}
+
+/* Hover Effect */
+.nav-links span:hover {
+  color: #f4b400;
+}
+
+/* ===== Right Section ===== */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ===== Profile Button ===== */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(90deg, #f4b400, #ffd700);
+  color: black;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap; /* prevents cut */
+}
+
+.profile:hover {
+  background: #203a43;
+  color: white;
+}
+
+/* ===== Hamburger ===== */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #2c3e50;
+}
+
+/* ========================= */
+/* 📱 TABLET VIEW */
+/* ========================= */
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links span {
+    font-size: 14px;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+}
+
+/* ========================= */
+/* 📱 MOBILE VIEW */
+/* ========================= */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide menu initially */
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+    padding: 20px 0;
+
+    display: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  /* Show when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links span {
+    font-size: 16px;
+  }
+
+  /* Right section adjustment */
+  .nav-right {
+    gap: 10px;
+  }
+
+  .profile {
+    padding: 6px 12px;
+  }
+
+  .logo img {
+    height: 55px;
+  }
+}

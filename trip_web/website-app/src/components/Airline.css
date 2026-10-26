@@ -1,0 +1,56 @@
+.airline {
+  padding: 20px;
+}
+
+/* Season section */
+.season-block {
+  margin-bottom: 30px;
+}
+
+/* Horizontal scroll */
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card style */
+.travel-card {
+  min-width: 220px;
+  height: 260px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.travel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark overlay */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+/* Tag (TOP 8 style) */
+.tag {
+  background: white;
+  color: black;
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+}

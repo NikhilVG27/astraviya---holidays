@@ -1,0 +1,152 @@
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470")
+    no-repeat center/cover;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.55);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GLASS EFFECT */
+.booking-container {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  width: 95%;
+  max-width: 1100px;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Tabs */
+.top-tabs {
+  display: flex;
+  gap: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.top-tabs span {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.top-tabs span:hover {
+  color: #008cff;
+}
+
+.top-tabs .active {
+  color: #008cff;
+  border-bottom: 3px solid #008cff;
+}
+
+/* Trip */
+.trip-options {
+  margin: 15px 0;
+  display: flex;
+  gap: 20px;
+}
+
+/* ROW */
+.booking-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* BOX */
+.box {
+  padding: 18px;
+  border-right: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.box:hover {
+  background: #f5faff;
+  transform: scale(1.03);
+}
+
+.box:last-child {
+  border-right: none;
+}
+
+.box p {
+  font-size: 12px;
+  color: gray;
+}
+
+.box h2 {
+  margin: 5px 0;
+  font-size: 22px;
+}
+
+.box span {
+  font-size: 12px;
+  color: #555;
+}
+
+/* FARES */
+.fare-options {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.fare-options span {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fare-options span:hover {
+  background: #e6f4ff;
+}
+
+.fare-options .active {
+  background: #008cff;
+  color: white;
+}
+
+/* BUTTON */
+.search-wrapper {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.search-wrapper button {
+  background: linear-gradient(to right, #008cff, #00c6ff);
+  color: white;
+  padding: 15px 60px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-wrapper button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(0,140,255,0.5);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
